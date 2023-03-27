@@ -1,0 +1,40 @@
+{
+  "name": "accessibility-lecture",
+  "version": "1.0.0",
+  "description": "Lecture COV885, IIT Delhi, Spring 2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "watch 'npm run build' .",
+    "intro": "node build.js --standalone --links; cp index.html intro.html; cp index.html ../COV885/",
+    "build": "npm run intro; for i in lecture_*; do npm run $i; done",
+    "lecture_01": "cd lecture_01; node ../build.js --standalone --links; cp index.html lecture_01.html; mkdir ../../COV885/lecture_01; cp index.html ../../COV885/lecture_01",
+    "lecture_02": "cd lecture_02; node ../build.js --standalone --links; cp index.html lecture_02.html; mkdir ../../COV885/lecture_02; cp index.html ../../COV885/lecture_02",
+    "lecture_03": "cd lecture_03; node ../build.js --standalone --links; cp index.html lecture_03.html; mkdir ../../COV885/lecture_03; cp index.html ../../COV885/lecture_03",
+    "lecture_04": "cd lecture_04; node ../build.js --standalone --links; cp index.html lecture_04.html; mkdir ../../COV885/lecture_04; cp index.html ../../COV885/lecture_04",
+    "lecture_05": "cd lecture_05; node ../build.js --standalone --links; cp index.html lecture_05.html; mkdir ../../COV885/lecture_05; cp index.html ../../COV885/lecture_05",
+    "lecture_06": "cd lecture_06; node ../build.js --standalone --links; cp index.html lecture_06.html; mkdir ../../COV885/lecture_06; cp index.html ../../COV885/lecture_06",
+    "lecture_07": "cd lecture_07; node ../build.js --standalone --links; cp index.html lecture_07.html; mkdir ../../COV885/lecture_07; cp index.html ../../COV885/lecture_07",
+    "lecture_08": "cd lecture_08; node ../build.js --standalone --links; cp index.html lecture_08.html; mkdir ../../COV885/lecture_08; cp index.html ../../COV885/lecture_08",
+    "lecture_09": "cd lecture_09; node ../build.js --standalone --links; cp index.html lecture_09.html; mkdir ../../COV885/lecture_09; cp index.html ../../COV885/lecture_09"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zorkow/AMS-workshop.git"
+  },
+  "author": "Volker Sorge",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/zorkow/Accessibility-Lecture"
+  },
+  "homepage": "https://github.com/zorkow/Accessibility-Lecture",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "markdown-it": "^11.0.0",
+    "markdown-it-attrs": "^3.0.3-19",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-header-sections": "^1.0.0",
+    "minify": "^5.2.0",
+    "normalize.css": "^8.0.1"
+  }
+}
