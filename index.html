@@ -9,6 +9,8 @@
 <link rel="icon" href="logos/favicon.ico" type="image/x-icon">
  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
  <link rel="stylesheet" href="resources/styles.css">
+ <script type="text/javascript" src="resources/scripts/mathjax-conf.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
  <script type="text/javascript" src="resources/scripts/general-conf.js"></script>
 </head>
 
@@ -53,8 +55,8 @@ iVBORw0KGgoAAAANSUhEUgAAAKYAAACtCAYAAAA6TwS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
 <ul>
 <li>ease and cost of production</li>
 <li>the possibility of digital dissemination</li>
-<li>no need for specially trained instructors to teach Braille/Tactile Graphics</li>
 <li>lack of tactile sensitivity</li>
+<li>no need for specially trained instructors to teach Braille/Tactile Graphics</li>
 <li>accessed through screen readers</li>
 <li>also beneficial for persons with cognitive disability and motor impairment</li>
 </ul>
@@ -186,7 +188,7 @@ iVBORw0KGgoAAAANSUhEUgAAAKYAAACtCAYAAAA6TwS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
 </ul>
 <p><strong>Demographics</strong></p>
 <ul>
-<li>13 Blind and 5 with very low vision</li>
+<li>13 Blind and 5 low vision</li>
 <li>Age: 16 to 41 years (Avg: 24.06)</li>
 </ul>
 </section>
@@ -194,19 +196,19 @@ iVBORw0KGgoAAAANSUhEUgAAAKYAAACtCAYAAAA6TwS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
 <h2>Complexity Metric</h2>
 <p>Cognitive Complexity Parameters</p>
 <ul>
-<li>Total Time Taken</li>
-<li>Thinking Time</li>
-<li>Number of Attempts</li>
-<li>Types of Mistakes</li>
-<li>Number of Mistakes</li>
+<li>Total time taken</li>
+<li>Thinking time</li>
+<li>Number of attempts</li>
+<li>Types of mistakes</li>
+<li>Number of mistakes</li>
 </ul>
 <p>Structural Complexity Parameters</p>
 <ul>
 <li>Height</li>
 <li>Weight</li>
-<li>Total Number of Nodes</li>
-<li>Maximum Number of Children of a Node</li>
-<li>Types of Operators</li>
+<li>Total number of nodes</li>
+<li>Maximum number of children of a node</li>
+<li>Types of operators</li>
 </ul>
 <p>Relation among them??</p>
 </section>
@@ -235,7 +237,7 @@ iVBORw0KGgoAAAANSUhEUgAAAKYAAACtCAYAAAA6TwS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
 </ul>
 <p><strong>Setup</strong></p>
 <ul>
-<li>Phase 1 (Pre-COVID era): Through Skype Call</li>
+<li>Phase 1 (Pre-COVID era): In-person or through Skype Call</li>
 <li>Phase 2 (COVID era): Web application
 <ul>
 <li>Rendered with NVDA and MathPlayer using ClearSpeak Rules</li>
@@ -267,11 +269,11 @@ iVBORw0KGgoAAAANSUhEUgAAAKYAAACtCAYAAAA6TwS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
 </ol>
 <p>Equation Ranking Criteria (C)</p>
 <ul>
-<li>C1: Ability to comprehend:   (1) &gt; (2) &gt;  (3) &gt; (4)</li>
-<li>C2: Ability to reproduce:  (2) &gt; (1) &gt; (3) &gt; (4)</li>
+<li>C1: Ability to comprehend; Sorting order: (1) -&gt; (2) -&gt; (3) -&gt; (4)</li>
+<li>C2: Ability to reproduce; Sorting order: (2) -&gt; (1) -&gt; (3) -&gt; (4)</li>
 <li>Avg: Average  of C1 and C2</li>
 </ul>
-<p>Ranks were averaged out to remove individual bias.</p>
+<p>Complexity values were averaged out to remove individual bias</p>
 </section>
 <section id="slide16">
 <h2>Average Ranks</h2>
@@ -287,7 +289,7 @@ AsTeR: Audio System for technical reading</p>
 </section>
 <section id="slide17">
 <h2>Correlation</h2>
-<table>
+<table style="border-spacing: 20px">
 <thead>
 <tr>
 <th style="text-align:left"></th>
@@ -333,7 +335,7 @@ AsTeR: Audio System for technical reading</p>
 </tr>
 </tbody>
 </table>
-<p>MJX has highest correlation with all metrices (C1, C2, and Avg)</p>
+<p>MJX (MathJax's metric based on internal MathML like structure) has highest correlation with all metrices (C1, C2, and Avg)</p>
 </section>
 <section id="slide18">
 <h2>Clustering based Analysis</h2>
@@ -353,6 +355,7 @@ AsTeR: Audio System for technical reading</p>
 <h2>Contextual Semantic</h2>
 <ul>
 <li>Audio rendering of equations depends on the context</li>
+<li>$|A|$ can be Absolute value of A, Modulus of the complex number A, Order of A, Determinant of the matrix A, or Cardinality of A</li>
 <li>Syntactic rendering leads to higher cognitive load.</li>
 <li>True meaning of mathematical symbols can only rarely be deduced by their occurrence in a single formula alone</li>
 </ul>
@@ -368,6 +371,11 @@ AsTeR: Audio System for technical reading</p>
 <h2>Architecture</h2>
 <p><img src="data:image/png;base64,
 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" alt="Block diagram of the architecture" width="5000"></p>
+<p><strong>Sample Concordances</strong></p>
+<ul>
+<li>We present, in dimension <strong>$n \geq 2$</strong>, a survey of samples to:</li>
+<li>$JF(x)$, the Jacobian matrix of <strong>$F$</strong> at $x$, has negative real</li>
+</ul>
 </section>
 <section id="slide21">
 <h2>Concordance Extractor</h2>
@@ -381,7 +389,7 @@ iVBORw0KGgoAAAANSUhEUgAAA3UAAACgCAIAAAAkd9J2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
 <li>To avoid multiple definition within a single concordance</li>
 <li>All definitions are not defined in sentences.</li>
 </ul>
-<table>
+<table style="border-spacing: 20px">
 <thead>
 <tr>
 <th><strong>Concordance</strong></th>
@@ -396,19 +404,9 @@ iVBORw0KGgoAAAANSUhEUgAAA3UAAACgCAIAAAAkd9J2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
 <td>$n$ is a dimension.</td>
 </tr>
 <tr>
-<td>ensuring that an equilibrium point <strong>$x^*$</strong> is a local attractor is</td>
-<td>Yes</td>
-<td>$x^*$ is a point.</td>
-</tr>
-<tr>
-<td>$JF(x)$, the Jacobian matrix of {\color{red} $F$} at $x$, has negative real</td>
+<td>$JF(x)$, the Jacobian matrix of <strong>$F$</strong> at $x$, has negative real</td>
 <td>No</td>
 <td>The definition of $F$ is not given; even though you can infer that $F$ is a function, this is not explicit in this concordance.</td>
-</tr>
-<tr>
-<td>restricted to the invariant plane {\color{red} $z=0$} is a center. Moreover, perturbing &amp;	No</td>
-<td>Even though $z=0$ is a plane is defined in this concordance. Still, to infer that $z$ is a dimension, you require prior domain knowledge. That is why it is not a valid mathematical definition. Here, we are only looking for the concordances which have the proper definition of the symbol within the concordance.</td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -434,13 +432,17 @@ iVBORw0KGgoAAAANSUhEUgAAA3UAAACgCAIAAAAkd9J2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
 <td>0</td>
 <td>4199</td>
 </tr>
+<tr>
+<td>Total</td>
+<td>5091</td>
+</tr>
 </tbody>
 </table>
 <p>Here, $0$ represents &quot;doesn't contain a valid mathematical definition&quot; and $1$ represents &quot;contains a valid mathematical definition&quot;.</p>
 </section>
 <section id="slide23">
 <h2>Classifier: Results of Various Models</h2>
-<table>
+<table style="border-spacing: 20px">
 <thead>
 <tr>
 <th></th>
@@ -494,13 +496,10 @@ iVBORw0KGgoAAAANSUhEUgAAA3UAAACgCAIAAAAkd9J2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
 <li>
 <p>If CENTERMATH followed by <code>,/is/are' followed by </code>called/said' then the Noun Phrase (NP) present post the specified pattern is a potential definition</p>
 <ul>
-<li>can define a new set CENTERMATH , called the Cartesian product of</li>
-<li>The set CENTERMATH is called the domain of</li>
-<li>is MATH, i.e., MATH, then CENTERMATH is said to be onto</li>
+<li>work within one fixed set <strong>$U$</strong>, called the universal set</li>
+<li>The set <strong>$A$</strong> is called the domain of</li>
+<li>a one-to-one and onto mapping <strong>$\pi : S \rightarrow S$</strong> is called a permutation of</li>
 </ul>
-</li>
-<li>
-<p>If ADV (Adverb)/SCONJ (Subordinating Conjuction)/CCONJ (Coordinating Conjuction) is present in the prefix then remove everything before ADV/SCONJ/CCONJ (inclusive)</p>
 </li>
 <li>
 <p>Developed 30 such rules.</p>
@@ -534,7 +533,7 @@ iVBORw0KGgoAAAANSUhEUgAAA3UAAACgCAIAAAAkd9J2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
 <li>Comparative assessment of open-source complexity metrics</li>
 <li>Conclusion: MJX Complexity metric has the highest correlation</li>
 <li>Proposed architecture for contextual semantic analysis of equations</li>
-<li>Integrated with MathJax and SRE</li>
+<li>Integrated with MathJax</li>
 </ul>
 <p><strong>Applications</strong></p>
 <ul>
@@ -544,20 +543,36 @@ iVBORw0KGgoAAAANSUhEUgAAA3UAAACgCAIAAAAkd9J2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
 </ul>
 </section>
 <section id="slide28">
-<h2>Open Questions</h2>
+<h2>Open Questions and Future Work</h2>
 <ul>
 <li>Can this result hold for equations other than algebraic ones?</li>
 <li>Impact of user characteristics such as education on the results</li>
 <li>Which is the most appropriate delivery mechanism?</li>
 <li>Is the choice of windowSize = 5 optimum?</li>
 <li>Is the semantic extractor algorithm holds valid across various domains and writing styles used by various authors?</li>
-<li>Algorithm for scope finding?</li>
 </ul>
 </section>
 <section id="slide29">
 <h2>Publications</h2>
+<ul>
+<li>Akashdeep Bansal, M Balakrishnan, Volker Sorge, “Complexity of Algebraic Equations”, Journal on Technology and Persons with Disabilities, CSUN 2021</li>
+<li>Akashdeep Bansal, Pawan Kumar, Volker Sorge, M Balakrishnan, “Locating Mathematical Definitions in a Document”, Proc of the 4th Int Workshop on	&quot;Digitization and E-Inclusion in Mathematics and Science 2021&quot; (DEIMS2021), Tokyo, Japan, Feb 18-19, 2021</li>
+<li>Akashdeep Bansal, Volker Sorge, M. Balakrishnan, and Aayush Agarwal, “Towards Semantically Enhanced Audio Rendering of Equations” in Proc. Joint International Conference on Digital Inclusion, Assistive Technology &amp; Accessibility - ICCHP-AAATE 2022, Lecco, Italy, p30-37, Springer, July 11-15, 2022</li>
+<li>Akashdeep Bansal, Volker Sorge, M Balakrishnan, “Extracting Contextual Semantic from a Concordance Containing Mathematical Definition&quot;, AAATE 2023 (submitted for review)</li>
+</ul>
 </section>
 <section id="slide30">
+<h2>Publications: RAVI Project</h2>
+<ul>
+<li>Akshansh Chahal, Manshul Belani, Akashdeep Bansal, Neha Jadhav, and M. Balakrishnan, “Template based Approach for Augmenting Image Descriptions,” in Proc. 16th International Conference on Computers Helping People with Special Needs, Springer, p104-112, 2018</li>
+<li>Volker Sorge, Akashdeep Bansal, Neha M Jadhav, Himanshu Garg, Ayushi Verma, M. Balakrishnan, “Towards generating web-accessible STEM documents from PDF”, in Proc. Web4All, 2020, April 21-22, 2020, Taipei, Taiwan</li>
+<li>Sankalan Pal Choudhary, Himanshu Garg, Akashdeep Bansal, Dipendra Manocha, M. Balakrishnan, “Making legacy digital content accessible at source”, Tenon Web Accessibility Challenge, Web4All 2019, May 13-14, 2019 (link)</li>
+<li>Shradha Holani, Akashdeep Bansal, M. Balakrishnan, “Pushpak: Voice command-based eBook navigator”, Tenon Web Accessibility Challenge, Web4All 2019, May 13-14, 2019, San Francisco, USA (link)</li>
+<li>Volker Sorge, M Balakrishnan, Neha Jadhav, Akashdeep Bansal, and Himanshu Garg, &quot;Rule based Mathematics and Layout Analysis of PDF Documents&quot;, Proc of the 4th Int Workshop on	&quot;Digitization and E-Inclusion in Mathematics and Science 2021&quot; (DEIMS2021), Tokyo, Japan, Feb 18-19, 2021</li>
+<li>Sruti Goyal, Tuhina Verma, Akashdeep Bansal, M Balakrishnan, “Automated Description of Geometry Diagrams”, Web4All 2019, May 13-14, 2019, San Francisco, USA (Best Poster Award)</li>
+</ul>
+</section>
+<section id="slide31">
 <h2>Appendix: Semantic Ambiguity Examples</h2>
 <table>
 <thead>

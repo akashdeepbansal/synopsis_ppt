@@ -43,8 +43,8 @@ IIT Delhi
 * Audio is the preferred modality due to
   - ease and cost of production
   - the possibility of digital dissemination 
-  - no need for specially trained instructors to teach Braille/Tactile Graphics
   - lack of tactile sensitivity
+  - no need for specially trained instructors to teach Braille/Tactile Graphics
   - accessed through screen readers
   - also beneficial for persons with cognitive disability and motor impairment
 
@@ -120,24 +120,24 @@ Which of the proposed open-source complexity metrics have highest correlation fa
   - Screening criteria; STEM background and Regular screen reader user
 
 **Demographics**
-  - 13 Blind and 5 with very low vision
+  - 13 Blind and 5 low vision
   - Age: 16 to 41 years (Avg: 24.06)
 
 ## Complexity Metric
 
 Cognitive Complexity Parameters
-* Total Time Taken
-* Thinking Time
-* Number of Attempts
-* Types of Mistakes
-* Number of Mistakes
+* Total time taken
+* Thinking time
+* Number of attempts
+* Types of mistakes
+* Number of mistakes
 
 Structural Complexity Parameters
 * Height
 * Weight
-* Total Number of Nodes
-* Maximum Number of Children of a Node
-* Types of Operators
+* Total number of nodes
+* Maximum number of children of a node
+* Types of operators
 
 Relation among them??
 
@@ -162,7 +162,7 @@ Relation among them??
 * Repeat up to 5 times/equation in case of incorrect reproduction or lack of confidence
 
 **Setup**
-* Phase 1 (Pre-COVID era): Through Skype Call
+* Phase 1 (Pre-COVID era): In-person or through Skype Call 
 * Phase 2 (COVID era): Web application
   * Rendered with NVDA and MathPlayer using ClearSpeak Rules
   * All the sessions were video recorded
@@ -185,11 +185,11 @@ Relation among them??
 4.  Error types and their numbers
 
 Equation Ranking Criteria (C)
-- C1: Ability to comprehend:   (1) > (2) >  (3) > (4)
-- C2: Ability to reproduce:  (2) > (1) > (3) > (4)
+- C1: Ability to comprehend; Sorting order: (1) -> (2) -> (3) -> (4)
+- C2: Ability to reproduce; Sorting order: (2) -> (1) -> (3) -> (4)
 - Avg: Average  of C1 and C2
 
-Ranks were averaged out to remove individual bias.
+Complexity values were averaged out to remove individual bias
 
 ## Average Ranks
 
@@ -213,7 +213,7 @@ AsTeR: Audio System for technical reading
 
 {style="border-spacing: 20px"}
 
-MJX has highest correlation with all metrices (C1, C2, and Avg)
+MJX (MathJax's metric based on internal MathML like structure) has highest correlation with all metrices (C1, C2, and Avg)
 
 ## Clustering based Analysis
 
@@ -227,6 +227,7 @@ MJX has highest correlation with all metrices (C1, C2, and Avg)
 ## Contextual Semantic
 
 - Audio rendering of equations depends on the context
+- $|A|$ can be Absolute value of A, Modulus of the complex number A, Order of A, Determinant of the matrix A, or Cardinality of A
 - Syntactic rendering leads to higher cognitive load.
 - True meaning of mathematical symbols can only rarely be deduced by their occurrence in a single formula alone
 
@@ -243,6 +244,10 @@ Scope: Scenario 2 --- can be learned from the document itself
 
 ![Block diagram of the architecture](resources/diagrams/architecture.png){width="5000"}
 
+**Sample Concordances**
+- We present, in dimension **$n \geq 2$**, a survey of samples to:
+- $JF(x)$, the Jacobian matrix of **$F$** at $x$, has negative real
+
 ## Concordance Extractor
 
 - Identifies the mathematical entities in the given HTML/XML document.
@@ -257,9 +262,9 @@ Why not the sentences??
 | **Concordance** | **Definition (Yes/No)** | **Explanation** |
 | -- | -- | -- |
 | We present, in dimension **$n \geq 2$**, a survey of samples to:  | Yes | $n$ is a dimension. |
-| ensuring that an equilibrium point **$x^*$** is a local attractor is | Yes | $x^*$ is a point. |
-| $JF(x)$, the Jacobian matrix of {\color{red} $F$} at $x$, has negative real | No | The definition of $F$ is not given; even though you can infer that $F$ is a function, this is not explicit in this concordance. |
-| restricted to the invariant plane {\color{red} $z=0$} is a center. Moreover, perturbing &	No | Even though $z=0$ is a plane is defined in this concordance. Still, to infer that $z$ is a dimension, you require prior domain knowledge. That is why it is not a valid mathematical definition. Here, we are only looking for the concordances which have the proper definition of the symbol within the concordance. |
+| $JF(x)$, the Jacobian matrix of **$F$** at $x$, has negative real | No | The definition of $F$ is not given; even though you can infer that $F$ is a function, this is not explicit in this concordance. |
+
+{style="border-spacing: 20px"}
 
 ## Classifier
 
@@ -273,6 +278,7 @@ Training : Testing = 80 : 20
 | -- | -- |
 | 1 | 892 |
 | 0 | 4199 |
+| Total | 5091 |
 
 Here, $0$ represents "doesn't contain a valid mathematical definition" and $1$ represents "contains a valid mathematical definition".
 
@@ -282,6 +288,8 @@ Here, $0$ represents "doesn't contain a valid mathematical definition" and $1$ r
 | -- | -- | -- | -- | -- | -- |
 | **Accuracy** | 0.841 | 0.852 | 0.855 | 0.866 | 0.876 |
 | **f1-score** | 0.652 | 0.702 | 0.717 | 0.748 | 0.749 |
+
+{style="border-spacing: 20px"}
 
 - CNN and Random forest are coming out to be better choice for the classification model.
 - Found stopwords to be useful.
@@ -302,10 +310,9 @@ for (allRules) {
 ## Semantic Extractor: Sample Rules
 
 - If CENTERMATH followed by `,/is/are' followed by `called/said' then the Noun Phrase (NP) present post the specified pattern is a potential definition
-  - can define a new set CENTERMATH , called the Cartesian product of
-  - The set CENTERMATH is called the domain of
-  - is MATH, i.e., MATH, then CENTERMATH is said to be onto
-- If ADV (Adverb)/SCONJ (Subordinating Conjuction)/CCONJ (Coordinating Conjuction) is present in the prefix then remove everything before ADV/SCONJ/CCONJ (inclusive)
+  - work within one fixed set **$U$**, called the universal set
+  - The set **$A$** is called the domain of
+  - a one-to-one and onto mapping **$\pi : S \rightarrow S$** is called a permutation of
 
 - Developed 30 such rules.
 - Get applied in a particular order
@@ -330,24 +337,36 @@ for (allRules) {
 * Comparative assessment of open-source complexity metrics
 * Conclusion: MJX Complexity metric has the highest correlation
 * Proposed architecture for contextual semantic analysis of equations
-* Integrated with MathJax and SRE
+* Integrated with MathJax
 
 **Applications**
 - To enhance the readability of equations in Braille and verbal description of diagrams
 - Can be a core component in development of user adaptable accessibility technology
 - potential to help in processing documents to automatically tag mathematical content, make it amenable to search and extract mathematical knowledge for further processing and handling by computational systems.
 
-## Open Questions
+## Open Questions and Future Work
 
 - Can this result hold for equations other than algebraic ones?
 - Impact of user characteristics such as education on the results
 - Which is the most appropriate delivery mechanism?
 - Is the choice of windowSize = 5 optimum?
 - Is the semantic extractor algorithm holds valid across various domains and writing styles used by various authors?
-- Algorithm for scope finding?
 
 ## Publications
 
+- Akashdeep Bansal, M Balakrishnan, Volker Sorge, “Complexity of Algebraic Equations”, Journal on Technology and Persons with Disabilities, CSUN 2021
+- Akashdeep Bansal, Pawan Kumar, Volker Sorge, M Balakrishnan, “Locating Mathematical Definitions in a Document”, Proc of the 4th Int Workshop on	"Digitization and E-Inclusion in Mathematics and Science 2021" (DEIMS2021), Tokyo, Japan, Feb 18-19, 2021
+- Akashdeep Bansal, Volker Sorge, M. Balakrishnan, and Aayush Agarwal, “Towards Semantically Enhanced Audio Rendering of Equations” in Proc. Joint International Conference on Digital Inclusion, Assistive Technology & Accessibility - ICCHP-AAATE 2022, Lecco, Italy, p30-37, Springer, July 11-15, 2022
+- Akashdeep Bansal, Volker Sorge, M Balakrishnan, “Extracting Contextual Semantic from a Concordance Containing Mathematical Definition", AAATE 2023 (submitted for review)
+
+## Publications: RAVI Project
+
+- Akshansh Chahal, Manshul Belani, Akashdeep Bansal, Neha Jadhav, and M. Balakrishnan, “Template based Approach for Augmenting Image Descriptions,” in Proc. 16th International Conference on Computers Helping People with Special Needs, Springer, p104-112, 2018
+- Volker Sorge, Akashdeep Bansal, Neha M Jadhav, Himanshu Garg, Ayushi Verma, M. Balakrishnan, “Towards generating web-accessible STEM documents from PDF”, in Proc. Web4All, 2020, April 21-22, 2020, Taipei, Taiwan
+- Sankalan Pal Choudhary, Himanshu Garg, Akashdeep Bansal, Dipendra Manocha, M. Balakrishnan, “Making legacy digital content accessible at source”, Tenon Web Accessibility Challenge, Web4All 2019, May 13-14, 2019 (link)
+- Shradha Holani, Akashdeep Bansal, M. Balakrishnan, “Pushpak: Voice command-based eBook navigator”, Tenon Web Accessibility Challenge, Web4All 2019, May 13-14, 2019, San Francisco, USA (link)
+- Volker Sorge, M Balakrishnan, Neha Jadhav, Akashdeep Bansal, and Himanshu Garg, "Rule based Mathematics and Layout Analysis of PDF Documents", Proc of the 4th Int Workshop on	"Digitization and E-Inclusion in Mathematics and Science 2021" (DEIMS2021), Tokyo, Japan, Feb 18-19, 2021 
+- Sruti Goyal, Tuhina Verma, Akashdeep Bansal, M Balakrishnan, “Automated Description of Geometry Diagrams”, Web4All 2019, May 13-14, 2019, San Francisco, USA (Best Poster Award)
 
 ## Appendix: Semantic Ambiguity Examples
 
