@@ -3,6 +3,8 @@
 :::Icon logos/favicon.ico
 :::CSS node_modules/normalize.css/normalize.css minify
 :::CSS resources/styles.css minify
+:::Script resources/scripts/mathjax-conf.js minify
+:::Script https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
 :::Script resources/scripts/general-conf.js minify
 :::
 
@@ -209,6 +211,8 @@ AsTeR: Audio System for technical reading
 | **C1** | 1 | 0.957 | 0.989 | **0.882** | 0.827 | 0.775 | 0.805 |
 | **C2** | 0.957 | 1 | 0.989 | **0.932** | 0.911 | 0.865 | 0.864 |
 | **Avg** | 0.989 | 0.989 | 1 | **0.918** | 0.879 | 0.83 | 0.844 |
+
+{style="border-spacing: 20px"}
 
 MJX has highest correlation with all metrices (C1, C2, and Avg)
 
