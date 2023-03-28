@@ -20,7 +20,6 @@
 Supervisors: Prof. M Balakrishnan and Prof. Volker Sorge
 IIT Delhi
 ![IIT Delhi logo](resources/logos/IITD_LOGO_RED.png)
-[cse.iitd.ac.in/~akashdeep/](https://www.cse.iitd.ac.in/~akashdeep/)
 [akashdeep@sit.iitd.ac.in](mailto:akashdeep@cse.iitd.ac.in)
 :::
 
@@ -43,6 +42,7 @@ IIT Delhi
   - ease and cost of production
   - the possibility of digital dissemination 
   - no need for specially trained instructors to teach Braille/Tactile Graphics
+  - lack of tactile sensitivity
   - accessed through screen readers
   - also beneficial for persons with cognitive disability and motor impairment
 
@@ -67,16 +67,15 @@ Audio rendering of the equations not only depends on the syntax but also depends
 
 | **Expression** | **Various Possibilities** | **Syntactic Rendering** |
 | -- | -- | -- |
-| $A \times B$ | Multiplication, Cartesian product of A and B, Cross product of A and B, A by B (In case of Matrix dimension) | A times B |
-| $A'$ | A transpose, First derivative of A, A feet, Lable to a point on a line, Another variable having similar properties as A | A prime |
-| $A''$ | Second derivative of A, A inch | A double prime |
-| $\|A\|$ | Absolute value of A, Modulus of the complex number A, Order of A, Determinant of the matrix A, Cardinality of A | Vertical line A vertical line |
-| $111001$ | Binary number, Decimal number | One hundred eleven thousand and one |
-| $(a,b)$ | Cartesian point, Open set, Ordered pair, Cycle, GCD of a and b | left paran a comma b right paran |
-| $f(x+y)$ | f is a function of $x+y$, f multiply $x+y$ | f left paran x plus y right paran |
-| $:$ | Ratio ($a:b$), Map($f:A\rightarrow B$), Such that ($A = {x: x \text{is a positive real number}}$) | colon |
-| $<A>$ | Cyclic sub-group, Ensemble average | less A greater |
-| $\bar{Z}$ | Complex conjugate, Mean, Topological closure, Algebraic closure | Z bar |
+| $A \times B$ | Multiplication | A times B |
+| | Cartesian product of A and B | |
+| | Cross product of A and B | |
+| | A by B (In case of Matrix dimension) | |
+| $A'$ | A transpose | A prime |
+| | First derivative of A | |
+| | A feet | |
+| | Label to a point on a line | |
+| | Another variable having similar properties as A | |
 
 ## Related Work
 
@@ -344,3 +343,18 @@ for (allRules) {
 - Algorithm for scope finding?
 
 ## Publications
+
+
+## Appendix: Semantic Ambiguity Examples
+
+| **Expression** | **Various Possibilities** | **Syntactic Rendering** |
+| -- | -- | -- |
+| $A''$ | Second derivative of A, A inch | A double prime |
+| $\|A\|$ | Absolute value of A, Modulus of the complex number A, Order of A, Determinant of the matrix A, Cardinality of A | Vertical line A vertical line |
+| $111001$ | Binary number, Decimal number | One hundred eleven thousand and one |
+| $(a,b)$ | Cartesian point, Open set, Ordered pair, Cycle, GCD of a and b | left paran a comma b right paran |
+| $f(x+y)$ | f is a function of $x+y$, f multiply $x+y$ | f left paran x plus y right paran |
+| $:$ | Ratio ($a:b$), Map($f:A\rightarrow B$), Such that ($A = {x: x \text{is a positive real number}}$) | colon |
+| $<A>$ | Cyclic sub-group, Ensemble average | less A greater |
+| $\bar{Z}$ | Complex conjugate, Mean, Topological closure, Algebraic closure | Z bar |
+
