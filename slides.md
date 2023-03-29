@@ -39,7 +39,6 @@ IIT Delhi
 ## Introduction & Motivation
 
 * Audio rendering and tactile Braille are the two main modalities used by persons with blindness for accessing content.
-* Braille uses 6/8 dots system -- only 64/256 symbols possible.
 * Audio is the preferred modality due to
   - ease and cost of production
   - the possibility of digital dissemination 
@@ -110,17 +109,20 @@ To what extent the complexity metrics used currently model this load?
 
 ## User Study
 
-**Research Question**
+**Equations**
 
-Which of the proposed open-source complexity metrics have highest correlation factor with the user’s experienced cognitive complexity for algebraic equations when rendered through audio?
+* Artificially constructed equations to remove the bias due to familiarity
+* Patterns among operators and variables were avoided
+* Test data: 30 equations of varied complexity
+
+**Subset of Equations**
+
+${{14}^{p}}-168/t={{243}^{r}}$
+
+$\frac{3+\frac{31}{p}}{24xg}={{(3b-179u)}^{\frac{q}{t}}}$
 
 **Participants**
-  - 18 Blind and Visually Impaired persons with STEM background
-  - Contacted through our network channels and accessibility mailing lists
-  - Screening criteria; STEM background and Regular screen reader user
-
-**Demographics**
-  - 13 Blind and 5 low vision
+  - 13 Blind and 5 low vision with STEM background
   - Age: 16 to 41 years (Avg: 24.06)
 
 ## Complexity Metric
@@ -141,19 +143,7 @@ Structural Complexity Parameters
 
 Relation among them??
 
-## User Study: Equations
-
-* Artificially constructed equations to remove the bias due to familiarity
-* Patterns among operators and variables were avoided
-* Algebraic equations using only the four basic arithmetic operations and exponentiation
-* Test data: 30 equations of varied complexity
-* Complexity derived from symbol count and tree depth of corresponding MathML expression.
-* Equally distributed in 9 sets of 10 equations -– presented one set to 2 participants
-
-## User Study: Subset of Equations
-
-
-## User Study: Protocol and Setup
+## User Study: Protocol \& Correctness Criteria
 
 **Protocol**
 * Listen to the entire expression without noting down anything
@@ -161,19 +151,14 @@ Relation among them??
 * Report the confidence on correctness assuming it was an examination
 * Repeat up to 5 times/equation in case of incorrect reproduction or lack of confidence
 
-**Setup**
-* Phase 1 (Pre-COVID era): In-person or through Skype Call 
-* Phase 2 (COVID era): Web application
-  * Rendered with NVDA and MathPlayer using ClearSpeak Rules
-  * All the sessions were video recorded
 
-## Correctness Criteria
+**Correctness Criteria**
 
-**Structural Correctness**
+Structural Correctness
   * Position of operators, number of terms and layout features recalled correctly
   * Individual value of terms or operators do not necessarily have to be correct
 
-**Reproduction Correctness**
+Reproduction Correctness
   * Structural correctness
   * All its terms and operators are correct
 
@@ -261,8 +246,8 @@ Why not the sentences??
 
 | **Concordance** | **Definition (Yes/No)** | **Explanation** |
 | -- | -- | -- |
-| We present, in dimension **$n \geq 2$**, a survey of samples to:  | Yes | $n$ is a dimension. |
-| $JF(x)$, the Jacobian matrix of **$F$** at $x$, has negative real | No | The definition of $F$ is not given; even though you can infer that $F$ is a function, this is not explicit in this concordance. |
+| We present, in dimension **$n \geq 2$**, a survey of samples to:  |     Yes | $n$ is a dimension. |
+| $JF(x)$, the Jacobian matrix of **$F$** at $x$, has negative real |     No | The definition of $F$ is not given; even though you can infer that $F$ is a function, this is not explicit in this concordance. |
 
 {style="border-spacing: 20px"}
 
@@ -307,12 +292,14 @@ for (allRules) {
 }
 ```
 
-## Semantic Extractor: Sample Rules
+## Semantic Extractor: Sample Rule
 
 - If CENTERMATH followed by `,/is/are' followed by `called/said' then the Noun Phrase (NP) present post the specified pattern is a potential definition
   - work within one fixed set **$U$**, called the universal set
   - The set **$A$** is called the domain of
   - a one-to-one and onto mapping **$\pi : S \rightarrow S$** is called a permutation of
+
+
 
 - Developed 30 such rules.
 - Get applied in a particular order
@@ -380,4 +367,69 @@ for (allRules) {
 | $:$ | Ratio ($a:b$), Map($f:A\rightarrow B$), Such that ($A = {x: x \text{is a positive real number}}$) | colon |
 | $<A>$ | Cyclic sub-group, Ensemble average | less A greater |
 | $\bar{Z}$ | Complex conjugate, Mean, Topological closure, Algebraic closure | Z bar |
+
+
+## Complexity Metrices
+
+$\frac{-e+(a^{29}+bc+d)}{f}$
+
+
+![Tree representation of Aster's quasi-prefix form](resources/diagrams/aster.png){width="1000"}
+AsTeR = 13
+
+
+![MathJax's visual tree representation](resources/diagrams/mjx.png){width="1700"}
+MJX = 26.16
+
+
+![MathJax's semantically enriched tree](resources/diagrams/mjxe.png){width="1700"}
+MJXe = 30.96
+
+
+![SRE's semantic tree representation](resources/diagrams/sre.png){width="1000"}
+SRE = 15
+
+## User Study
+
+**Research Question**
+
+Which of the proposed open-source complexity metrics have highest correlation factor with the user’s experienced cognitive complexity for algebraic equations when rendered through audio?
+
+**Participants**
+  - 18 Blind and Visually Impaired persons with STEM background
+  - Contacted through our network channels and accessibility mailing lists
+  - Screening criteria; STEM background and Regular screen reader user
+
+**Demographics**
+  - 13 Blind and 5 low vision
+  - Age: 16 to 41 years (Avg: 24.06)
+
+## User Study: Equations
+
+* Artificially constructed equations to remove the bias due to familiarity
+* Patterns among operators and variables were avoided
+* Algebraic equations using only the four basic arithmetic operations and exponentiation
+* Test data: 30 equations of varied complexity
+* Complexity derived from symbol count and tree depth of corresponding MathML expression.
+* Equally distributed in 9 sets of 10 equations -– presented one set to 2 participants
+
+**Subset of Equations**
+
+${{14}^{p}}-168/t={{243}^{r}}$
+
+$\frac{3+\frac{31}{p}}{24xg}={{(3b-179u)}^{\frac{q}{t}}}$
+
+## User Study: Protocol and Setup
+
+**Protocol**
+* Listen to the entire expression without noting down anything
+* Reproduce the expression
+* Report the confidence on correctness assuming it was an examination
+* Repeat up to 5 times/equation in case of incorrect reproduction or lack of confidence
+
+**Setup**
+* Phase 1 (Pre-COVID era): In-person or through Skype Call 
+* Phase 2 (COVID era): Web application
+  * Rendered with NVDA and MathPlayer using ClearSpeak Rules
+  * All the sessions were video recorded
 
