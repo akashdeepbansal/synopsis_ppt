@@ -196,7 +196,7 @@ AsTeR: Audio System for technical reading
 | **C2** | 0.957 | 1 | 0.989 | **0.932** | 0.911 | 0.865 | 0.864 |
 | **Avg** | 0.989 | 0.989 | 1 | **0.918** | 0.879 | 0.83 | 0.844 |
 
-{style="border-spacing: 20px"}
+{style="border-spacing: 50px;"}
 
 MJX (MathJax's metric based on internal MathML like structure) has highest correlation with all metrices (C1, C2, and Avg)
 
@@ -249,7 +249,7 @@ Why not the sentences??
 | We present, in dimension **$n \geq 2$**, a survey of samples to:  |     Yes | $n$ is a dimension. |
 | $JF(x)$, the Jacobian matrix of **$F$** at $x$, has negative real |     No | The definition of $F$ is not given; even though you can infer that $F$ is a function, this is not explicit in this concordance. |
 
-{style="border-spacing: 20px"}
+{style="border-spacing: 50px"}
 
 ## Classifier
 
@@ -274,7 +274,7 @@ Here, $0$ represents "doesn't contain a valid mathematical definition" and $1$ r
 | **Accuracy** | 0.841 | 0.852 | 0.855 | 0.866 | 0.876 |
 | **f1-score** | 0.652 | 0.702 | 0.717 | 0.748 | 0.749 |
 
-{style="border-spacing: 20px"}
+{style="border-spacing: 50px"}
 
 - CNN and Random forest are coming out to be better choice for the classification model.
 - Found stopwords to be useful.
@@ -369,25 +369,30 @@ for (allRules) {
 | $\bar{Z}$ | Complex conjugate, Mean, Topological closure, Algebraic closure | Z bar |
 
 
-## Complexity Metrices
+## Complexity Metrices: AsTeR \& SRE
 
-$\frac{-e+(a^{29}+bc+d)}{f}$
-
+$$\frac{-e+(a^{29}+bc+d)}{f}$$
 
 ![Tree representation of Aster's quasi-prefix form](resources/diagrams/aster.png){width="1000"}
-AsTeR = 13
 
+- AsTeR = 13
+- SRE = 15
+
+## Complexity Metrices: MJX
+
+$$\frac{-e+(a^{29}+bc+d)}{f}$$
 
 ![MathJax's visual tree representation](resources/diagrams/mjx.png){width="1700"}
+
 MJX = 26.16
 
+## Complexity Metrices: MJXe
+
+$$\frac{-e+(a^{29}+bc+d)}{f}$$
 
 ![MathJax's semantically enriched tree](resources/diagrams/mjxe.png){width="1700"}
+
 MJXe = 30.96
-
-
-![SRE's semantic tree representation](resources/diagrams/sre.png){width="1000"}
-SRE = 15
 
 ## User Study
 
